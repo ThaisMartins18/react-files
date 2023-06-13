@@ -5,6 +5,7 @@ import kushima from './kushima.png'
 import minato from './minato.jpg'
 import Container from "@mui/material/Container";
 import { Box } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 
 export function Counter() {
@@ -23,32 +24,41 @@ export function Counter() {
     }
 
     return (
-        <div class="grade">
-            <div class="avatar-container">
-                <div class="total-container">
-                    <h2 class="total-button-container">
-                        <span>Total: {total}</span>
-                        <button class="reset-button" onClick={Zerar}>Reset</button>
-                    </h2>
-                </div>
-                <div>
-                    <img src={minato} alt={'Avatar Man'} class="avatar" />
-                    <div class="counter">
-                        <Buttons status='add' onClick={() => setQtdman(qtdman + 1)} />
-                        <p class="count">{qtdman}</p>
-                        <Buttons status='decrementar' onClick={() => setQtdman(qtdman - 1)} />
+        <div>
+            
+            <Box m={5} />
+            <Container maxWidth="xs">
+                <div className="packer">
+                    <Box m={12} />
+                    <h1>Contador</h1>
+                    <div class="avatar-container">
+                        <div class="total-container">
+                            <h2 class="total-button-container">
+                                <span>Total: {total}</span>
+                                <button class="reset-button" onClick={Zerar}>Reset</button>
+                            </h2>
+                        </div>
+                        <div>
+                            <img src={minato} alt={'Avatar Man'} class="avatar" />
+                            <div class="counter">
+                                <Buttons status='add' onClick={() => setQtdman(qtdman + 1)} />
+                                <p class="count">{qtdman}</p>
+                                <Buttons status='decrementar' onClick={() => setQtdman(qtdman - 1)} />
+                            </div>
+                        </div>
+                        <div>
+                            <img src={kushima} alt={'Avatar Woman'} class="avatar" />
+                            <div class="counter">
+                                <Buttons status='add' onClick={() => setQtdwoman(qtdwoman + 1)} />
+                                <p class="count">{qtdwoman}</p>
+                                <Buttons status='decrementar' onClick={() => setQtdwoman(qtdwoman - 1)} />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <img src={kushima} alt={'Avatar Woman'} class="avatar" />
-                    <div class="counter">
-                        <Buttons status='add' onClick={() => setQtdwoman(qtdwoman + 1)} />
-                        <p class="count">{qtdwoman}</p>
-                        <Buttons status='decrementar' onClick={() => setQtdwoman(qtdwoman - 1)} />
-                    </div>
-                </div>
-            </div>
-        </div>
+            </Container>
+            <Link to="http://localhost:3000/"  className="btn btn-primary" >Retornar a página inicial</Link>
+        </div >
     )
 
 }

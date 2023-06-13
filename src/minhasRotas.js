@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Home from './Home';
-import Atv01 from './React/Atv01/data_hora.js';
-//import Atv01 from './React/Atv01/letreiro.js';
-import Atv02 from './React/Atv02/counter.js';
-import Atv06 from './React/Atv06/Calculator';
-import Atv07 from './React/Atv07/Cards';
+import Clock from './React/Atv01/data_hora.js';
+import Letreiro from './React/Atv01/letreiro.js';
+import Counter from './React/Atv02/counter.js';
+import Calculator from './React/Atv06/Calculator';
+import Cards from './React/Atv07/Cards';
 
 
 export default function MinhasRotas(){
@@ -13,11 +13,11 @@ export default function MinhasRotas(){
         <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/src/React/Atv01/data_hora.js" element={<Atv01/>} />
-            <Route path="/src/React/Atv01/letreiro.js" element={<Atv01 frase={"Venha estudar na fatec!"}/>} />
-            <Route path="/src/React/Atv02/counter.js" element={<Atv02/>} />
-            <Route path="/src/React/Atv06/Calculator.jsx" element={<Atv06/>} />
-            <Route path="/src/React/Atv07/Cards.js" element={<Atv07/>} />
+            <Route path="/src/React/Atv01/data_hora.js" element={<Clock/>} />
+            <Route path="/src/React/Atv01/letreiro.js" element={<Letreiro frase={"Venha estudar na fatec!"}/>} />
+            <Route path="/src/React/Atv02/counter.js" element={<Counter/>} />
+            <Route path="/src/React/Atv06/Calculator.jsx" element={<Calculator/>} />
+            <Route path="/src/React/Atv07/Cards.js" element={<Cards/>} />
         </Routes>
         </BrowserRouter>
     );

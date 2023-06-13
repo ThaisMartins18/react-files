@@ -24,7 +24,7 @@ class Clock extends React.Component {
       <div>
         <h1>Relógio</h1>
         <h2>{this.state.date.toLocaleTimeString()}</h2>
-        <Link to="src\Home.js">Retornar a página inicial</Link>
+        <Link to="http://localhost:3000/"  className="btn btn-primary">Retornar a página inicial</Link>
       </div>
     );
   }

@@ -9,12 +9,13 @@ import kitty05 from './img/kitty05.png';
 import kitty06 from './img/kitty06.png';
 import kitty07 from './img/kitty07.png';
 import kitty08 from './img/kitty08.png';
+import { Link } from 'react-router-dom';
 
 function Cards() {
     const [items, setItems] = useState([
-        { id: 1, img: { kitty01 }, stat: "" },
-        { id: 1, img: { kitty01 }, stat: "" },
-        { id: 2, img: { kitty02 }, stat: "" },
+        { id: 1, img: {kitty01}, stat: "" },
+        { id: 1, img: {kitty01}, stat: "" },
+        { id: 2, img: {kitty02}, stat: "" },
         { id: 2, img: {kitty02}, stat: "" },
         { id: 3, img: {kitty03}, stat: "" },
         { id: 3, img: {kitty03}, stat: "" },
@@ -67,7 +68,9 @@ function Cards() {
             {items.map((item, index) => (
                 <Card key={index} item={item} id={index} handleClick={handleClick} />
             ))}
+            <Link to="http://localhost:3000/"  className="btn btn-primary">Retornar a página inicial</Link>
         </div>
+        
     )
 }
 

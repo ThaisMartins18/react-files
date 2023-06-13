@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Calculator.css";
 import Container from "@mui/material/Container";
 import { Box } from "@mui/material";
+import { Link } from 'react-router-dom';
 
 export default function Calculator() {
     const [num,setNum] =useState(0);
@@ -88,6 +89,7 @@ export default function Calculator() {
                 </div>
         </div>
         </Container>
+        <Link to="http://localhost:3000/"  className="btn btn-primary">Retornar a página inicial</Link>
         </div>
     )
 }
