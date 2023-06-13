@@ -65,3 +65,9 @@
     margin: 0 10px;
   }
   
+  .grade {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+    
+}
